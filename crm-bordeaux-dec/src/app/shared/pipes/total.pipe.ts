@@ -6,8 +6,11 @@ import { Prestation } from '../models/prestation.model';
 })
 export class TotalPipe implements PipeTransform {
 
-  transform(value: Prestation, args?: any): any {
+  transform(value: Prestation, tauxTva?: number): number {
     if (value) {
+      if (tauxTva) {
+        return value.totalTTC(tauxTva);
+      }
       return value.totalHT();
     }
     return null;

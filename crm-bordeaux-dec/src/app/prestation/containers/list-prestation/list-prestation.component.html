@@ -2,25 +2,11 @@
   <table class="table table-striped table-hover">
     <thead>
       <tr>
-        <td scope="col">Prestation</td>
-        <td scope="col">Client</td>
-        <td scope="col">Nombre de jours</td>
-        <td scope="col">tjmHt</td>
-        <td scope="col">Total HT</td>
-        <td scope="col">Total TTC</td>
-        <td scope="col">Etat</td>
+       <th scope="col" *ngFor="let item of headers">{{ item }}</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of collection">
-        <td>{{ item.typePresta }}</td>
-        <td>{{ item.client }}</td>
-        <td>{{ item.nbJours }}</td>
-        <td>{{ item.tjmHT | currency:'EUR' }}</td>
-        <td>{{ item | total | currency:'EUR' }}</td>
-        <td>{{ item.totalTTC() | currency:'EUR' }}</td>
-        <td>{{ item.state }}</td>
-      </tr>
+      <app-item-prestation *ngFor="let obj of collection" [item]="obj"></app-item-prestation>
     </tbody>
   </table>
 </div>
