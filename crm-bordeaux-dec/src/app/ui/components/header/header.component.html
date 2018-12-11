@@ -1,10 +1,9 @@
 <div class="d-flex align-items-center header">
 
   <div>
-    <span>
-        <fa-icon [icon]="faBars"></fa-icon>
-      <!-- <fa-icon *ngIf="!open" [icon]="faBars"></fa-icon>
-      <fa-icon *ngIf="open" [icon]="faTimes"></fa-icon> -->
+    <span (click)="open = !open">
+      <fa-icon *ngIf="!open" [icon]="faBars"></fa-icon>
+      <fa-icon *ngIf="open" [icon]="faTimes"></fa-icon>
     </span>
   </div>
 
