@@ -11,7 +11,7 @@ export const fakeCollection: Prestation[] = [
   new Prestation({
     id: '2',
     typePresta: 'Formation',
-    client: 'Yu-gi-ho',
+    client: 'Yu-gi-oh',
     nbJours: 20,
     tjmHT: 700
   })

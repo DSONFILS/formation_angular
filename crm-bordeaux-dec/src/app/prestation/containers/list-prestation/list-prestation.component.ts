@@ -22,7 +22,8 @@ export class ListPrestationComponent implements OnInit {
       'tjmht',
       'Total HT',
       'Total TTC',
-      'Etat'
+      'Etat',
+      ''
     ];
   }
 
