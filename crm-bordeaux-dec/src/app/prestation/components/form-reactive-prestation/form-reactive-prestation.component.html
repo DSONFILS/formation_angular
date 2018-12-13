@@ -1,0 +1,40 @@
+<div class="container">
+  <form novalidate [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="type">Type</label>
+      <input formControlName="typePresta" type="text" class="form-control" id="type">
+      <div class="alert alert-danger" [appFormValidation]="this.form.get('typePresta')">Champ invalid</div>
+    </div>
+
+    <div class="form-group">
+      <label for="client">Client</label>
+      <input formControlName="client" type="text" class="form-control" id="client">
+      <div class="alert alert-danger" [appFormValidation]="this.form.get('client')">Champ invalid</div>
+    </div>
+
+    <div class="form-group">
+      <label for="nbJours">nbJours</label>
+      <input formControlName="nbJours" type="text" class="form-control" id="nbJours">
+    </div>
+
+    <div class="form-group">
+      <label for="tjmHT">tjmHT</label>
+      <input formControlName="tjmHT" type="text" class="form-control" id="tjmHT">
+    </div>
+
+    <div class="form-group">
+      <label for="tauxTva">Taux TVA</label>
+      <input formControlName="tauxTva" type="text" class="form-control" id="tauxTva">
+    </div>
+
+    <div class="form-group">
+      <label for="etat">Etat</label>
+      <select formControlName="state" class="form-control" id="state">
+        <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+      </select>
+    </div>
+    <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Valider</button>
+    <button type="reset" class="btn btn-secondary">Réinitialiser</button>
+    <button type="button" (click)="annuler()" class="btn btn-secondary">Annuler</button>
+  </form>
+</div>

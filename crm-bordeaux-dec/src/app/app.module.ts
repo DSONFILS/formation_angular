@@ -7,6 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { UiModule } from './ui/ui.module';
+import { TemplateAComponent } from './templates/template-a/template-a.component';
+import { TemplateBComponent } from './templates/template-b/template-b.component';
+import { TemplateModule } from './templates/template.module';
 
 // the second parameter 'fr' is optional
 registerLocaleData(localeFr, 'fr');

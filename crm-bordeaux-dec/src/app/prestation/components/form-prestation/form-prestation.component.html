@@ -1,0 +1,38 @@
+<div class="container">
+  <form novalidate #form="ngForm" (submit)="onSubmit()">
+    <div class="form-group">
+      <label for="type">Type</label>
+      <input name="type" [(ngModel)]="init.typePresta" required type="text" class="form-control" id="type">
+    </div>
+
+    <div class="form-group">
+      <label for="client">Client</label>
+      <input name="client" [(ngModel)]="init.client" required minlengt="3" type="text" class="form-control" id="client">
+    </div>
+
+    <div class="form-group">
+      <label for="nbJours">nbJours</label>
+      <input name="nbJours" [(ngModel)]="init.nbJours" type="text" class="form-control" id="nbJours">
+    </div>
+
+    <div class="form-group">
+      <label for="tjmHT">tjmHT</label>
+      <input name="tjmHT" [(ngModel)]="init.tjmHT" type="text" class="form-control" id="tjmHT">
+    </div>
+
+    <div class="form-group">
+      <label for="tauxTva">Taux TVA</label>
+      <input name="tauxTva" [(ngModel)]="init.tauxTva" type="text" class="form-control" id="tauxTva">
+    </div>
+
+    <div class="form-group">
+      <label for="etat">Etat</label>
+      <select class="form-control" id="state" name="etat" [(ngModel)]="init.state">
+        <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+      </select>
+    </div>
+    <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Valider</button>
+    <button type="reset" class="btn btn-secondary">Réinitialiser</button>
+    <button type="button" (click)="annuler()" class="btn btn-secondary">Annuler</button>
+  </form>
+</div>
