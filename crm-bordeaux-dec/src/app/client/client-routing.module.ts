@@ -4,7 +4,9 @@ import { PageClientComponent } from './pages/page-client/page-client.component';
 import { AddClientComponent } from './containers/add-client/add-client.component';
 
 const appRoutes: Routes = [
-  {path: '', component: PageClientComponent},
+  {path: '', component: PageClientComponent,
+   data: {title: 'client'}
+  },
   {path: 'add', component: AddClientComponent}
 ];
 

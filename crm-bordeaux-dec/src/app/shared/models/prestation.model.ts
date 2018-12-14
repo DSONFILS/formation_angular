@@ -9,6 +9,7 @@ export class Prestation implements PrestationI {
   nbJours = 0;
   tauxTva = 20;
   state = State.OPTION;
+  comment: string;
 
   constructor(fields?: Partial<Prestation>) {
     if (fields) {

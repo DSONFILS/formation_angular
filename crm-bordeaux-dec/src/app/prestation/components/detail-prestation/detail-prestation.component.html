@@ -1,0 +1,24 @@
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" *ngIf="presta$ | async as presta">
+  <ngb-panel title="Informations">
+    <ng-template ngbPanelContent>
+      <p>{{ presta.typePresta}}</p>
+      <p>{{ presta.client }}</p>
+      <p>{{ presta.nbJours }}</p>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel>
+    <ng-template ngbPanelTitle>
+      <span>Tarifs</span>
+    </ng-template>
+    <ng-template ngbPanelContent>
+        <p>{{ presta.tjmHT | currency:'Eur' }}</p>
+        <p>{{ presta | total | currency:'Eur' }}</p>
+        <p>{{ presta | total:presta.tauxTva | currency:'Eur' }}</p>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="state">
+    <ng-template ngbPanelContent>
+        <p>{{ presta.state }}</p>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>

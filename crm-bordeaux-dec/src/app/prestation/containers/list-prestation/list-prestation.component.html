@@ -1,5 +1,5 @@
 <app-tableau [headers]="headers">
-    <app-item-prestation *ngFor="let obj of collection" [item]="obj"></app-item-prestation>
+    <app-item-prestation *ngFor="let obj of collection$ | async" [item]="obj"></app-item-prestation>
 </app-tableau>
 <hr>
 <app-bouton [label]="'une prestation'"></app-bouton>

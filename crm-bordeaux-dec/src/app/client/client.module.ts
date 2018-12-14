@@ -6,13 +6,17 @@ import { ItemClientComponent } from './components/item-client/item-client.compon
 import { ListClientComponent } from './containers/list-client/list-client.component';
 import { PageClientComponent } from './pages/page-client/page-client.component';
 import { AddClientComponent } from './containers/add-client/add-client.component';
+import { FormReactiveClientComponent } from './components/form-reactive-client/form-reactive-client.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [PageClientComponent, ListClientComponent, ItemClientComponent, AddClientComponent],
+  declarations: [PageClientComponent, ListClientComponent, ItemClientComponent, AddClientComponent, FormReactiveClientComponent],
   imports: [
     CommonModule,
     ClientRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ClientModule { }

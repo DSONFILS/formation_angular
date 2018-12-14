@@ -10,7 +10,7 @@ export class PageNotFoundComponent implements OnInit {
   fullImagePath: string;
 
   constructor() {
-    this.fullImagePath = require('../../../../assets/images/hydre_15.jpg');
+    // this.fullImagePath = require('../../../../assets/images/hydre_15.jpg');
   }
 
   ngOnInit() {

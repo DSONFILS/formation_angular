@@ -20,6 +20,6 @@ import { TotalPipe } from './pipes/total.pipe';
     TemplateModule
   ],
   exports: [TotalPipe, StateDirective, TableauComponent, BoutonComponent, FormulaireComponent,
-    TemplateModule, FormValidationDirective]
+    TemplateModule, FormValidationDirective, FontAwesomeModule, RouterModule]
 })
 export class SharedModule { }

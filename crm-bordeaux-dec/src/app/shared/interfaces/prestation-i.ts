@@ -5,6 +5,7 @@ export interface PrestationI {
   tjmHT: number;
   nbJours: number;
   tauxTva: number;
+  comment: string;
   totalHT(): number;
   totalTTC(): number;
 }
